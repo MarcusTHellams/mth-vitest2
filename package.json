@@ -15,9 +15,9 @@
     "prestart:prod": "npm run build",
     "format": "prettier . --write --ignore-path .gitignore && git update-index --again",
     "lint": "eslint . --config .eslintrc.build.json --ext .ts,.tsx --fix --ignore-path .gitignore",
-    "test": "vitest",
-    "test:ci": "vitest run",
-    "test:coverage": "vitest --watch=false --silent --coverage",
+    "test": "vitest --reporter=verbose",
+    "test:ci": "vitest run --reporter=verbose",
+    "test:coverage": "vitest --watch=false --silent --coverage --reporter=verbose",
     "prepare": "husky install"
   },
   "keywords": [],
@@ -26,6 +26,7 @@
   "devDependencies": {
     "@tsconfig/node16": "^1.0.3",
     "@types/node": "^18.7.8",
+    "@types/nodemailer": "^6.4.7",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
     "@typescript-eslint/parser": "^5.33.1",
     "@vitest/coverage-c8": "^0.22.1",
@@ -47,5 +48,8 @@
     "typescript": "^4.7.4",
     "vite": "^3.0.9",
     "vitest": "^0.22.1"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.1"
   }
 }

@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@tsconfig/node16': ^1.0.3
   '@types/node': ^18.7.8
+  '@types/nodemailer': ^6.4.7
   '@typescript-eslint/eslint-plugin': ^5.33.1
   '@typescript-eslint/parser': ^5.33.1
   '@vitest/coverage-c8': ^0.22.1
@@ -16,6 +17,7 @@ specifiers:
   eslint-plugin-sort-destructure-keys: ^1.4.0
   fs-extra: ^11.1.0
   husky: ^8.0.0
+  nodemailer: ^6.9.1
   prettier: ^2.7.1
   rimraf: ^3.0.2
   ts-node: ^10.9.1
@@ -25,9 +27,13 @@ specifiers:
   vite: ^3.0.9
   vitest: ^0.22.1
 
+dependencies:
+  nodemailer: 6.9.1
+
 devDependencies:
   '@tsconfig/node16': 1.0.3
   '@types/node': 18.7.8
+  '@types/nodemailer': 6.4.7
   '@typescript-eslint/eslint-plugin': 5.33.1_vsoshirnpb7xw6mr7xomgfas2i
   '@typescript-eslint/parser': 5.33.1_4rv7y5c6xz3vfxwhbrcxxi73bq
   '@vitest/coverage-c8': 0.22.1
@@ -218,6 +224,12 @@ packages:
 
   /@types/node/18.7.8:
     resolution: {integrity: sha512-/YP55EMK2341JkODUb8DM9O0x1SIz2aBvyF33Uf1c76St3VpsMXEIW0nxuKkq/5cxnbz0RD9cfwNZHEAZQD3ag==}
+    dev: true
+
+  /@types/nodemailer/6.4.7:
+    resolution: {integrity: sha512-f5qCBGAn/f0qtRcd4SEn88c8Fp3Swct1731X4ryPKqS61/A3LmmzN8zaEz7hneJvpjFbUUgY7lru/B/7ODTazg==}
+    dependencies:
+      '@types/node': 18.7.8
     dev: true
 
   /@typescript-eslint/eslint-plugin/5.33.1_vsoshirnpb7xw6mr7xomgfas2i:
@@ -1981,6 +1993,11 @@ packages:
   /node-cleanup/2.1.2:
     resolution: {integrity: sha512-qN8v/s2PAJwGUtr1/hYTpNKlD6Y9rc4p8KSmJXyGdYGZsDGKXrGThikLFP9OCHFeLeEpQzPwiAtdIvBLqm//Hw==}
     dev: true
+
+  /nodemailer/6.9.1:
+    resolution: {integrity: sha512-qHw7dOiU5UKNnQpXktdgQ1d3OFgRAekuvbJLcdG5dnEo/GtcTHRYM7+UfJARdOFU9WUQO8OiIamgWPmiSFHYAA==}
+    engines: {node: '>=6.0.0'}
+    dev: false
 
   /object-inspect/1.12.2:
     resolution: {integrity: sha512-z+cPxW0QGUp0mcqcsgQyLVRDoXFQbXOwBaqyF7VIgI4TWNQsDHrBpUQslRmIfAoYWdYzs6UlKJtB2XJpTaNSpQ==}
